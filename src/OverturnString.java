@@ -4,6 +4,10 @@
  */
 public class OverturnString {
 
+    public static void main(String[] args) {
+        System.out.println(doThis("i am a student."));
+    }
+
     /**
      *翻转字符串操作
      *
