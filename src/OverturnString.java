@@ -14,7 +14,7 @@ public class OverturnString {
      * @param str 待翻转字符串
      * @return 翻转后的字符串
      */
-    public static String doThis(String str){
+    private static String doThis(String str){
         char[] chars = str.toCharArray();
         int start = 0;
         int end = 0;

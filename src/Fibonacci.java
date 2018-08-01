@@ -21,7 +21,7 @@ public class Fibonacci {
      * @param n
      * @return
      */
-    public static long recursive(int n){
+    private static long recursive(int n){
         if (n <= 0){
             return 0;
         }
@@ -39,7 +39,7 @@ public class Fibonacci {
      * @param n
      * @return
      */
-    public static long notRecursive(int n){
+    private static long notRecursive(int n){
         long before = 1;
         long after = 2;
         if (n <= 0){

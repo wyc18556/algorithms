@@ -13,7 +13,7 @@ public class BubbleSort {
         System.out.println(Arrays.toString(array));
     }
 
-    public static void sort(int[] params){
+    private static void sort(int[] params){
         int tmp = 0;
         //无序序列边界
         int sortBorder = params.length - 1;
