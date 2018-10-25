@@ -1,3 +1,5 @@
+package sort;
+
 import java.util.Arrays;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] array = new int[]{3,4,2,1,5,6,7,8,};
+        int[] array = new int[]{3,4,2,1,5,6,7,8};
         sort(array);
         System.out.println(Arrays.toString(array));
     }
