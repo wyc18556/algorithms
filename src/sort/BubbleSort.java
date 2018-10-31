@@ -27,7 +27,7 @@ public class BubbleSort {
             //有序标识，每一轮的初始是true
             boolean isSorted = true;
             for (int j = 0; j < sortBorder; j++){
-                if (params[j] > params[j + 1]){
+                if (params[j] > params[j + 2]){
                     tmp = params[j];
                     params[j] = params[j + 1];
                     params[j + 1] = tmp;
