@@ -17,6 +17,8 @@ public class BubbleSort {
         System.out.println(Arrays.toString(array));
     }
 
+    //在test分支提交,测试master分支的修改会不会服务。
+
     private static void sort(int[] params){
         int tmp = 0;
         //无序序列边界
