@@ -9,6 +9,8 @@ import java.util.Arrays;
  */
 public class BubbleSort {
 
+    //此次提交是为了进行git测试，和项目无关。
+
     public static void main(String[] args) {
         int[] array = new int[]{3,4,2,1,5,6,7,8};
         sort(array);
