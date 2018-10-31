@@ -18,14 +18,14 @@ public class BubbleSort {
     private static void sort(int[] params){
         int tmp = 0;
         //无序序列边界
-        int sortBorder = params.length - 2;
+        int sortBorder = params.length - 1;
         //最后一次交换的位置
         int lastChangedIndex = 0;
         for (int i = 0; i < params.length; i++){
             //有序标识，每一轮的初始是true
             boolean isSorted = true;
             for (int j = 0; j < sortBorder; j++){
-                if (params[j] > params[j + 2]){
+                if (params[j] > params[j + 1]){
                     tmp = params[j];
                     params[j] = params[j + 1];
                     params[j + 1] = tmp;
