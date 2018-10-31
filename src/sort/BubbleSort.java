@@ -18,7 +18,7 @@ public class BubbleSort {
     private static void sort(int[] params){
         int tmp = 0;
         //无序序列边界
-        int sortBorder = params.length - 1;
+        int sortBorder = params.length - 2;
         //最后一次交换的位置
         int lastChangedIndex = 0;
         for (int i = 0; i < params.length; i++){
