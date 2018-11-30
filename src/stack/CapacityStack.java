@@ -4,10 +4,12 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
+ * @Author wyc1856
+ *
  * 定容栈
  */
 public class CapacityStack {
-    private int N;
+    private int n;
     private String[] a;
 
     public CapacityStack(int n) {
@@ -15,30 +17,30 @@ public class CapacityStack {
     }
 
     private void push(String item) {
-        a[N++] = item;
+        a[n++] = item;
     }
 
     private int size() {
-        return N;
+        return n;
     }
 
     private String pop() {
-        return a[--N];
+        return a[--n];
     }
 
     private boolean isEmpty() {
-        return N ==0;
+        return n ==0;
     }
 
     private boolean isFull() {
-        return N == a.length;
+        return n == a.length;
     }
 
     public static void main(String[] args){
         CapacityStack s = new CapacityStack(5);
         while (!StdIn.isEmpty()){
             String item = StdIn.readString();
-            if (!item.equals("-")){
+            if (!"-".equals(item)){
                 if (s.isFull()){
                     StdOut.print("栈满，添加无效\n");
                 }else {

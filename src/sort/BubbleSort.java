@@ -3,6 +3,8 @@ package sort;
 import java.util.Arrays;
 
 /**
+ * @Author wyc1856
+ *
  * 优化后的冒泡排序
  * 1.添加有序标识，如果已经有序则直接跳出排序。
  * 2.记录无序边界，减少不必要的比较。

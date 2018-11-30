@@ -1,6 +1,8 @@
 package other;
 
 /**
+ * @Author wyc1856
+ *
  * 翻转字符串算法实现
  * 如：请把“I am a student.”，翻转成“I ma a .tneduts”.
  */

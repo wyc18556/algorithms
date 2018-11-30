@@ -1,6 +1,8 @@
 package other;
 
 /**
+ * @Author wyc1856
+ *
  * 斐波那契数列问题
  *
  */

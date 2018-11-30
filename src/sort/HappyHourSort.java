@@ -3,6 +3,8 @@ package sort;
 import java.util.Arrays;
 
 /**
+ * @Author wyc1856
+ *
  * 快乐小时排序，又叫鸡尾酒排序，是对冒泡排序的扩展。
  * 当序列中有序段较长时，能提高排序效率。
  */
@@ -37,7 +39,9 @@ public class HappyHourSort {
             }
             //更新无序序列右边界
             rightSortBorder = rightLastChangeIndex;
-            if (isSorted) break;
+            if (isSorted) {
+                break;
+            }
 
             //重新初始化标识
             isSorted = true;
@@ -54,7 +58,9 @@ public class HappyHourSort {
             }
             //更新无序序列左边界
             leftSortBorder = leftLastChangeIndex;
-            if (isSorted) break;
+            if (isSorted) {
+                break;
+            }
         }
     }
 }

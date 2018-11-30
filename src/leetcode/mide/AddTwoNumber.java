@@ -1,4 +1,4 @@
-package leetCode.mide;
+package leetcode.mide;
 
 /**
  * @Author wyc1856
@@ -24,9 +24,11 @@ public class AddTwoNumber {
     }
 
     public static ListNode compute(ListNode l, ListNode r){
-        ListNode dummyHead = new ListNode(0);//假表头
+        //假表头
+        ListNode dummyHead = new ListNode(0);
         ListNode current = dummyHead;
-        int carry = 0;//进位
+        //进位标识
+        int carry = 0;
         while (l != null || r != null){
             int x = l == null ? 0 : l.val;
             int y = r == null ? 0 : r.val;
@@ -34,10 +36,15 @@ public class AddTwoNumber {
             carry = eachSum / 10;
             current.next = new ListNode(eachSum % 10);
             current = current.next;
-            if (l != null) l = l.next;
-            if (r != null) r = r.next;
+            if (l != null) {
+                l = l.next;
+            }
+            if (r != null) {
+                r = r.next;
+            }
         }
-        if (carry > 0){//最高位之和存在进位
+        //最高位之和存在进位
+        if (carry > 0){
             current.next = new ListNode(carry);
         }
         return dummyHead.next;

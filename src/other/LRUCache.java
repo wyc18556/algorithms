@@ -19,7 +19,7 @@ public class LRUCache {
         hashMap = new HashMap<>();
     }
 
-    class Node {
+    static class Node {
         String key;
         String value;
         Node pre;
@@ -32,13 +32,16 @@ public class LRUCache {
     }
 
     private void removeNode(Node node){
-        if (node == head){//删除头结点
+        //删除头结点
+        if (node == head){
             head = node.next;
             head.pre = null;
-        }else if (node == end){//删除尾节点
+        }//删除尾节点
+        else if (node == end){
             end = node.pre;
             end.next = null;
-        }else {//删除中间节点
+        }//删除中间节点
+        else {
             node.pre.next = node.next;
             node.next.pre = node.pre;
         }
@@ -75,7 +78,8 @@ public class LRUCache {
     public String put(String key, String value){
         Node node = hashMap.get(key);
         if (node == null){
-            if (hashMap.size() >= limit){//已满
+            //已满
+            if (hashMap.size() >= limit){
                 removeNode(head);
             }
             node = new Node(key,value);

@@ -1,4 +1,4 @@
-package leetCode.easy;
+package leetcode.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -31,7 +31,7 @@ public class TwoSum {
     }
 
     private static int[] twoSum2(int[] nums, int target){
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(10);
         for (int i = 0; i < nums.length; i++){
             map.put(nums[i], i);
         }
@@ -45,12 +45,14 @@ public class TwoSum {
     }
 
     private static int[] twoSum3(int[] nums, int target){
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(10);
         for (int i = 0; i < nums.length; i++){
-            if (map.containsKey(target - nums[i])){//下标在i之前的元素中包含目标元素
+            //下标在i之前的元素中包含目标元素
+            if (map.containsKey(target - nums[i])){
                 return new int[]{map.get(target - nums[i]), i};
             }
-            map.put(nums[i], i);//此操作放在后面，可以省略判断当前元素不能等于目标元素
+            //此操作放在后面，可以省略判断当前元素不能等于目标元素
+            map.put(nums[i], i);
         }
         return null;
     }
