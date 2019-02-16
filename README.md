@@ -1,2 +1,2 @@
-# arithmetics
-some arithmetic examples from daily learning.
+# algorithms
+some arithmetic examples from daily learning, most come from leetcode.
