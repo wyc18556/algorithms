@@ -11,16 +11,8 @@ import java.util.Set;
 public class CycleList {
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        node1.next = node2;
-        ListNode node3 = new ListNode(3);
-        node2.next = node3;
-        ListNode node4 = new ListNode(4);
-        node3.next = node4;
-        //形成环
-        node4.next = node2;
-        System.out.println(hasCycle(node1));
+        boolean hasCycle = hasCycle(init());
+        System.out.println(hasCycle);
     }
 
     private static boolean hasCycle(ListNode head) {
@@ -49,6 +41,21 @@ public class CycleList {
         }
         return false;
 //        */
+    }
+
+    private static ListNode init(){
+        ListNode head = new ListNode(1);
+        ListNode node2 = new ListNode(2);
+        ListNode node3 = new ListNode(3);
+        ListNode node4 = new ListNode(4);
+
+        head.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        //形成环
+        node4.next = node2;
+
+        return head;
     }
 
     static class ListNode {
