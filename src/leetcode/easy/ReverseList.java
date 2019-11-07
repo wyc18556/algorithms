@@ -17,29 +17,19 @@ public class ReverseList {
         node3.next = node4;
         node4.next = new ListNode(5);
         System.out.println(node1);
-        node1 =reverse(node1);
+        node1 = reverse(node1);
         System.out.println(node1);
     }
 
     private static ListNode reverse(ListNode head){
-
-        if(head == null || head.next == null){
-            return head;
+        ListNode pre = null, next;
+        while (head != null){
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
         }
-
-        ListNode node1 = head;
-        ListNode node2 = head.next;
-        ListNode node3 = null;
-
-        while(node2 != null){
-            node3 = node2.next;
-            node2.next = node1;
-            node1 = node2;
-            node2 = node3;
-        }
-        head.next = null;
-        head = node1;
-        return head;
+        return pre;
     }
 
     static class ListNode{
