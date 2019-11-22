@@ -18,7 +18,7 @@ public class InsertSort {
 
     private static void sort(int[] array){
         //将数组分为两部分，前一部分有序，后一部分无序。
-        //刚开始前一部分就一个下标为0的元素，则后一部分重下标为1的元素开始，依次插入到前一部分中去。
+        //刚开始前一部分就一个下标为0的元素，则后一部分从下标为1的元素开始，依次插入到前一部分中去。
         for (int i = 1; i < array.length; i++){
             int value = array[i];
             int j = i - 1;
