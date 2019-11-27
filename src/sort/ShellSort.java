@@ -19,7 +19,9 @@ public class ShellSort {
     private void shellSort(int[] arr) {
         int length = arr.length;
         int temp;
+        //递减步长
         for (int step = length / 2; step >= 1; step /= 2) {
+            //每次重新计算步长后，使用直接插入算法对每组元素进行插入排序
             for (int i = step; i < length; i++) {
                 temp = arr[i];
                 int j = i - step;
