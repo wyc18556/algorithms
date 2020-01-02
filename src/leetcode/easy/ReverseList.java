@@ -19,6 +19,8 @@ public class ReverseList {
         System.out.println(node1);
         node1 = reverse(node1);
         System.out.println(node1);
+        ListNode listNode = reverseRecursive(node1);
+        System.out.println(listNode);
     }
 
     private static ListNode reverse(ListNode head){
@@ -30,6 +32,16 @@ public class ReverseList {
             head = next;
         }
         return pre;
+    }
+
+    private static ListNode reverseRecursive(ListNode node){
+        if (node.next == null){
+            return node;
+        }
+        ListNode newNode = reverseRecursive(node.next);
+        node.next.next = node;
+        node.next = null;
+        return newNode;
     }
 
     static class ListNode{
