@@ -26,7 +26,7 @@ public class Search {
         Search solution = new Search();
         System.out.println("广度优先搜索：");
         solution.bfs(graph, 0, 7);
-        System.out.println("\n深度度优先搜索：");
+        System.out.println("\n深度优先搜索：");
         solution.dfs(graph, 0, 7);
     }
 
@@ -165,7 +165,7 @@ public class Search {
         }
 
         /**
-         * 添加s-关系
+         * 添加s-t关系
          *
          * @param s
          * @param t
